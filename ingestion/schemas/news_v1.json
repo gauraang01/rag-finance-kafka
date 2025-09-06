@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "NewsEvent",
+    "type": "object",
+    "properties": {
+      "schema_version": { "type": "string" },
+      "id": { "type": "string" },
+      "source": { "type": "string" },
+      "query": { "type": "string" },
+      "title": { "type": "string" },
+      "description": { "type": ["string", "null"] },
+      "content": { "type": ["string", "null"] },
+      "url": { "type": "string", "format": "uri" },
+      "published_at": { "type": "string", "format": "date-time" },
+      "fetched_at": { "type": "string", "format": "date-time" },
+      "language": { "type": "string" }
+    },
+    "required": [
+      "schema_version", "id", "source", "title", "url",
+      "published_at", "fetched_at"
+    ]
+  }
+  
